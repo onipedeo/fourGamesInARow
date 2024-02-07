@@ -16,7 +16,8 @@ public class Player {
 	private String name;
 	// Add other instance variable(s)
 	private String playerNumber;
-
+	private String color;
+    
 	// Question: should scanner be static or not?
 	private static Scanner scanner = new Scanner(System.in);
 
@@ -34,14 +35,22 @@ public class Player {
 		return playerNumber;
 	}
 
-	public int makeMove() {
+	public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+   	public int makeMove() {
 		System.out.println("Make your move. What column do you want to put a token in?");
 		int column = scanner.nextInt();
 		return column;
 	}
 
 	public String toString() {
-		return ("Player " + playerNumber + " is " + name);
+		return ("Player " + playerNumber + " is " + name + ". His color is " + color + ".");
 	}
 
 }
