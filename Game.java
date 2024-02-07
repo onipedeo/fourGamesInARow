@@ -114,6 +114,7 @@ public class Game {
 		gameTimer.start();
 
 		while (gameTimer.isTimeUp() == false) {
+			System.out.println("you have "+ timeForGame + " Seconds for this session!");
 			while(noWinner) {
 
 				if (board.boardFull()) {
